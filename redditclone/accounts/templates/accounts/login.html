@@ -4,7 +4,7 @@
   {% endif %}
   <br>
   <br>
-  <form class="" action="{% url 'login' %}" method="POST">
+  <form class="" action="{% url 'accounts:login' %}" method="POST">
     {% csrf_token %}
     Username:
     <br>
