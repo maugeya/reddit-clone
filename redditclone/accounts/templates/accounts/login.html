@@ -6,6 +6,11 @@
   <br>
   <form class="" action="{% url 'accounts:login' %}" method="POST">
     {% csrf_token %}
+
+    {% if request.GET.next %}
+      <input type="hidden" name="next" value={{request.GET.next}}>
+    {% endif %}
+
     Username:
     <br>
     <input type="text" name="username">
