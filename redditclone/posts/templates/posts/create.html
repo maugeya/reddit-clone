@@ -1,1 +1,21 @@
-<h1>create page</h1>
+<h1>New Post</h1>
+  {% if error %}
+    {{ error }}
+  {% endif %}
+  <br>
+  <br>
+  <form class="" action="{% url 'posts:create' %}" method="POST">
+    {% csrf_token %}
+
+
+    Title:
+    <br>
+    <input type="text" name="title">
+    <br>
+    URL:
+    <br>
+    <input type="text" name="url">
+    <br>
+    <br>
+    <input type="submit" value="Post">
+  </form>
